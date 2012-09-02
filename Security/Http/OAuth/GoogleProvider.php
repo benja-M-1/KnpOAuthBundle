@@ -11,7 +11,8 @@
 
 namespace Knp\Bundle\OAuthBundle\Security\Http\OAuth;
 
-use Knp\Bundle\OAuthBundle\Security\Http\OAuth\OAuthProvider;
+use Knp\Bundle\OAuthBundle\Security\Http\OAuth\OAuthProvider,
+    Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -50,7 +51,7 @@ class GoogleProvider extends OAuthProvider
         $content = http_build_query($parameters);
 
         $response = $this->httpRequest($url, $content);
-        $response = json_decode($response);
+        $response = json_decode($response, true);
 
         if (isset($response['error'])) {
             throw new AuthenticationException(sprintf('OAuth error: "%s"', $response['error']));
