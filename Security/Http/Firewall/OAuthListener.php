@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Knp\Bundle\OauthBundle\Security\Http\Firewall;
+namespace Knp\Bundle\OAuthBundle\Security\Http\Firewall;
 
 use Symfony\Component\Security\Http\Firewall\AbstractAuthenticationListener,
     Symfony\Component\HttpFoundation\Request,
