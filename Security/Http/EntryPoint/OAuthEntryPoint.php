@@ -41,9 +41,9 @@ class OAuthEntryPoint implements AuthenticationEntryPointInterface
     private $checkPath;
 
     /**
-     * @param Symfony\Component\Security\Http\HttpUtils $httpUtils
+     * @param Symfony\Component\Security\Http\HttpUtils                         $httpUtils
      * @param Knp\Bundle\OAuthBundle\Security\Http\OAuth\OAuthProviderInterface $oauthProvider
-     * @param string $checkPath
+     * @param string                                                            $checkPath
      */
     public function __construct(HttpUtils $httpUtils, OAuthProviderInterface $oauthProvider, $checkPath, $loginPath)
     {

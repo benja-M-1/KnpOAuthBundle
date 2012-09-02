@@ -27,10 +27,10 @@ class OAuthFactory extends AbstractFactory
     /**
      * Creates an OAuth provider for a given firewall
      *
-     * @param Symfony\Component\DependencyInjection\ContainerBuilder $container
-     * @param string $id The firewall id
-     * @param array $config The firewall config
-     * @return string The OAuth provider service id
+     * @param  Symfony\Component\DependencyInjection\ContainerBuilder $container
+     * @param  string                                                 $id        The firewall id
+     * @param  array                                                  $config    The firewall config
+     * @return string                                                 The OAuth provider service id
      */
     protected function createOAuthProvider(ContainerBuilder $container, $id, $config)
     {

@@ -27,7 +27,7 @@ class OAuthToken extends AbstractToken
 
     /**
      * @param string $accessToken The OAuth access token
-     * @param array $roles
+     * @param array  $roles
      */
     public function __construct($accessToken, array $roles = array())
     {
